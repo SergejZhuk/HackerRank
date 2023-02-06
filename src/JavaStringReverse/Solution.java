@@ -8,12 +8,12 @@ public class Solution {
         Scanner sc=new Scanner(System.in);
         String A=sc.next();
 
-        List<Character> list = new LinkedList<>();
+        java.util.List<Character> list = new java.util.LinkedList<>();
         for(char ch: A.toCharArray()){
             list.add(ch);
         }
-        ListIterator<Character> iterator = list.listIterator();
-        ListIterator<Character> reversIterator = list.listIterator(list.size());
+        java.util.ListIterator<Character> iterator = list.listIterator();
+        java.util.ListIterator<Character> reversIterator = list.listIterator(list.size());
 
         boolean isPalidrom = true;
         while (iterator.hasNext() && reversIterator.hasNext()){
@@ -23,6 +23,6 @@ public class Solution {
             }
         }
         /* Enter your code here. Print output to STDOUT. */
-
+        System.out.println(isPalidrom);
     }
 }
