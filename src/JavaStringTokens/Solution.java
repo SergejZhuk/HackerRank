@@ -1,5 +1,7 @@
 package JavaStringTokens;
 
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Solution {
@@ -7,14 +9,20 @@ public class Solution {
 
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        String[] words = s.trim().split("[ !,?._'@]");
+        String[] words = s.trim().split("[ ,!?._'@]");
         int sum = 0;
         for (int i = 0; i < words.length; i++) {
-            sum = sum + i;
+            if (!Objects.equals(words[i], "")) {
+                sum++;
+            }
         }
         System.out.println(sum);
-        // Write your code here.
-        // scan.close();
+        for (int j = 0; j < words.length; j++) {
+            if (!Objects.equals(words[j], "")) {
+                System.out.println(words[j]);
+            }
+        }
+         scan.close();
 
     }
 }
