@@ -16,13 +16,15 @@ public class Solution {
         java.util.ListIterator<Character> reversIterator = list.listIterator(list.size());
 
         boolean isPalidrom = true;
-        while (iterator.hasNext() && reversIterator.hasNext()){
-            if(iterator.next() != reversIterator.next()){
+        while (iterator.hasNext() && reversIterator.hasPrevious()){
+            if(iterator.next() != reversIterator.previous()){
                 isPalidrom = false;
                 break;
             }
         }
-        /* Enter your code here. Print output to STDOUT. */
-        System.out.println(isPalidrom);
+           if(isPalidrom){
+               System.out.println("Yes");
+      }else
+               System.out.println("No");
     }
 }
