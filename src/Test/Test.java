@@ -5,10 +5,10 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) throws IOException {
+        for (int i = 1; i < 5; i++) {
+            for (int j = i; j >= 1; j--) {
+            }
 
-        while (true) {
-            //int x = System.in.read();
-            System.out.println(System.in.read());
         }
     }
 }
